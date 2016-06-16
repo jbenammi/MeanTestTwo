@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Jonathan Ben-Ammi">
+	<title>Duck Dashboard</title>
+	<meta name="description" content="This is a Mongoose assignment for coding dojo">
+	<meta name="description" content="This is a coding dojo assignment for learning MONGO">
+	<link rel="stylesheet" type="text/css" href="/css/materialize.css">
+	<script type ="text/javascript" src="/js/jquery-2.2.3.js"></script>
+	<script type ="text/javascript" src="/js/jquery-ui.js"></script>
+	<script type ="text/javascript" src="/js/materialize.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h3 class="center">This is <%= oneduck.name %>!</h3>
+		<h4 class="center">He is a <%= oneduck.type %> type duck!</h4>
+		<div class="divider"></div>
+		<p class="center"><a href="/ducks/<%= oneduck._id %>/edit"><button class="btn waves-effect waves-light">Edit</button></a></p>
+		<form action="/ducks/<%= oneduck._id %>/destroy" method="post">
+			<p class="center"><button class="btn waves-effect waves-light" type="submit" name="action">Remove</button></p>
+		</form>
+	</div>
+</body>
+</html>
